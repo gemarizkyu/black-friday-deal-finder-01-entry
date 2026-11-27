@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bargain Beacon — Real Black Friday Deals, Checked 27 Nov 2026</title>
+<meta name="description" content="Twenty real Black Friday deals from Amazon, Best Buy and Walmart, each price-checked on 27 Nov 2026, with an honest verdict on whether it is really a deal.">
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-inner">
+    <p class="eyebrow">Black Friday Week · 19–30 Nov 2026</p>
+    <h1>Bargain <span class="beacon">Beacon</span></h1>
+    <p class="tagline">Real Black Friday deals, checked by hand on <strong>27 Nov 2026</strong> — sale price, usual price, and an honest verdict on whether each one is actually a deal.</p>
+    <ul class="stats" aria-label="Deal summary">
+      <li><b id="stat-deals">20</b><span>deals checked</span></li>
+      <li><b id="stat-saving">$3,163</b><span>total savings</span></li>
+      <li><b id="stat-avg">35%</b><span>average discount</span></li>
+      <li><b id="stat-best">—</b><span>biggest discount</span></li>
+    </ul>
+  </div>
+</header>
+
+<div class="controls" id="controls">
+  <div class="controls-inner">
+    <div>
+      <label for="f-search">Search deals</label>
+      <input id="f-search" type="search" placeholder="Try “headphones”, “Dyson”, “TV”…">
+    </div>
+    <div>
+      <label for="f-category">Category</label>
+      <select id="f-category"></select>
+    </div>
+    <div>
+      <label for="f-store">Store</label>
+      <select id="f-store"></select>
+    </div>
+    <div>
+      <label for="f-sort">Sort by</label>
+      <select id="f-sort"></select>
+    </div>
+    <div class="filter-row">
+      <div class="filter-group" role="group" aria-label="Minimum discount">
+        <span>At least</span>
+        <label class="radios"><input type="radio" name="minoff" value="0" checked> any</label>
+        <label class="radios"><input type="radio" name="minoff" value="20"> 20% off</label>
+        <label class="radios"><input type="radio" name="minoff" value="30"> 30% off</label>
+        <label class="radios"><input type="radio" name="minoff" value="40"> 40% off</label>
+        <label class="radios"><input type="radio" name="minoff" value="50"> 50% off</label>
+      </div>
+      <div class="filter-group" role="group" aria-label="Verdict">
+        <span>Verdict</span>
+        <label class="radios"><input type="radio" name="verdict" value="All" checked> all</label>
+        <label class="radios"><input type="radio" name="verdict" value="true"> True deal</label>
+        <label class="radios"><input type="radio" name="verdict" value="strong"> Strong price</label>
+        <label class="radios"><input type="radio" name="verdict" value="decent"> Decent deal</label>
+      </div>
+    </div>
+  </div>
+  <p id="result-count" role="status">Showing all 20 deals</p>
+</div>
+
+<main id="main">
+  <div class="grid" id="grid"></div>
+</main>
+
+<section id="detail" hidden></section>
+
+<section class="how">
+  <h2>How to read a verdict</h2>
+  <ol>
+    <li><strong>True deal</strong> — a new low or near it, and the saving is real. Buy it now if you wanted it anyway.</li>
+    <li><strong>Strong price</strong> — well below the usual price, and the lowest or close to it. Good value, not a once-a-year event.</li>
+    <li><strong>Decent deal</strong> — a genuine saving, but modest. Fine if you were buying it this week anyway.</li>
+  </ol>
+  <p class="verdict-key">
+    <span class="badge v-true">True deal</span>
+    <span class="badge v-strong">Strong price</span>
+    <span class="badge v-decent">Decent deal</span>
+  </p>
+</section>
+
+<footer>
+  <p><strong>How these prices were checked.</strong> Every deal on this page was found in a store listing or a deals source that names the store, and the price was read on 27 Nov 2026. Each card names its source and the day it was read. “Usual price” is the store's own list or comparable value for the same product.</p>
+  <p><strong>Prices move.</strong> Black Friday prices change fast and stock runs out. Always confirm the price on the store page before you buy — if it has moved, the deal is gone, and this page's price is what it was on 27 Nov 2026.</p>
+  <p><strong>Sale windows:</strong> Amazon 19–30 Nov · Best Buy 19–28 Nov · Walmart 23–29 Nov · Cyber Monday 30 Nov.</p>
+  <p>No tracking, no affiliate links, no ads. Bargain Beacon is a one-page static site built for the make.fun “Build the best real Black Friday deal finder” bounty.</p>
+</footer>
+
+<script type="module" src="./app.js"></script>
+</body>
+</html>
